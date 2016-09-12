@@ -1,0 +1,654 @@
+HI-TECH Software C Compiler 
+
+Linker command line:
+
+--edf=C:\Program Files (x86)\HI-TECH Software\PICC\9.83\dat\en_msgs.txt -cs \
+  -h+dist/default/production\EnergyMeter_RTC.X.production.sym -z -Q16F877A \
+  -ol.obj -Mdist/default/production/EnergyMeter_RTC.X.production.map -E1 \
+  -ACONST=00h-0FFhx32 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
+  -AENTRY=00h-0FFhx32 -ASTRING=00h-0FFhx32 -ABANK0=020h-06Fh \
+  -ABANK1=0A0h-0EFh -ABANK2=0110h-016Fh -ABANK3=0190h-01EFh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
+  -AABS1=020h-07Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh -ACOMMON=070h-07Fh \
+  -ASFR0=00h-01Fh -ASFR1=080h-09Fh -ASFR2=0100h-010Fh -ASFR3=0180h-018Fh \
+  -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pfunctab=CODE \
+  -ACONFIG=02007h-02007h -pconfig=CONFIG -DCONFIG=2 -AIDLOC=02000h-02003h \
+  -pidloc=IDLOC -DIDLOC=2 -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA \
+  -DEEDATA=2 -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
+  C:\Users\flemms\AppData\Local\Temp\s34s.obj \
+  dist/default/production\EnergyMeter_RTC.X.production.obj 
+
+Object code version is 3.10
+
+Machine type is 16F877A
+
+
+
+                Name                               Link     Load   Length Selector   Space Scale
+C:\Users\flemms\AppData\Local\Temp\s34s.obj
+                end_init                              C        C        3        8       0
+                reset_vec                             0        0        3        0       0
+dist/default/production\EnergyMeter_RTC.X.production.obj
+                intentry                              4        4        8        8       0
+                text937                             5F0      5F0       14      ADA       0
+                text924                             233      233      10F        8       0
+                text923                             5B1      5B1       26      ADA       0
+                text922                             5D7      5D7       19      ADA       0
+                text916                             342      342       FE        8       0
+                text914                               F        F      224        8       0
+                maintext                            440      440       C2        8       0
+                cstackBANK0                          3C       3C       18       20       1
+                cstackCOMMON                         70       70        B       70       1
+                dataBANK0                            20       20       1C       20       1
+                bssBANK0                             54       54        9       20       1
+                bssCOMMON                            7B       7B        1       70       1
+                cinit                               56D      56D       44      ADA       0
+                strings                             502      502       6B      A04       0
+
+TOTAL           Name                               Link     Load   Length     Space
+        CLASS   CONST          
+
+        CLASS   CODE           
+                end_init                              C        C        3         0
+                intentry                              4        4        8         0
+                reset_vec                             0        0        3         0
+                text937                             5F0      5F0       14         0
+                text924                             233      233      10F         0
+                text923                             5B1      5B1       26         0
+                text922                             5D7      5D7       19         0
+                text916                             342      342       FE         0
+                text914                               F        F      224         0
+                maintext                            440      440       C2         0
+                cinit                               56D      56D       44         0
+
+        CLASS   STRCODE        
+
+        CLASS   ENTRY          
+
+        CLASS   STRING         
+                strings                             502      502       6B         0
+
+        CLASS   BANK0          
+                cstackBANK0                          3C       3C       18         1
+                dataBANK0                            20       20       1C         1
+                bssBANK0                             54       54        9         1
+
+        CLASS   BANK1          
+
+        CLASS   BANK2          
+
+        CLASS   BANK3          
+
+        CLASS   RAM            
+
+        CLASS   ABS1           
+                abs_s1                               7E       7E        2         1
+
+        CLASS   COMMON         
+                cstackCOMMON                         70       70        B         1
+                bssCOMMON                            7B       7B        1         1
+
+        CLASS   SFR0           
+
+        CLASS   SFR1           
+
+        CLASS   SFR2           
+
+        CLASS   SFR3           
+
+        CLASS   CONFIG         
+
+        CLASS   IDLOC          
+
+        CLASS   EEDATA         
+
+
+
+SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
+
+                reset_vec                      000000  000003  000003         0       0  CODE        2
+                intentry                       000004  0004FE  000502         8       0  CODE        2
+                dataBANK0                      000020  00003D  00005D        20       1  BANK0       1
+                cstackCOMMON                   000070  00000C  00007C        70       1  COMMON      1
+                strings                        000502  00006B  00056D       A04       0  STRING      2
+                cinit                          00056D  000097  000604       ADA       0  CODE        2
+
+
+UNUSED ADDRESS RANGES
+
+        Name                Unused          Largest block    Delta
+        BANK0            05D-06F            13           1
+        BANK1            0A0-0EF            50           1
+        BANK2            110-16F            60           1
+        BANK3            190-1EF            60           1
+        CODE             003-003             1           2
+                         604-1FFF           800
+        COMMON           07C-07D             2           1
+        CONFIG           2007-2007             1           2
+        CONST            003-003             1           2
+                         604-1FFF           100
+        EEDATA           2100-21FF           100           2
+        ENTRY            003-003             1           2
+                         604-1FFF           100
+        IDLOC            2000-2003             4           2
+        RAM              05D-06F            13           1
+                         0A0-0EF            50
+                         110-16F            60
+                         190-1EF            60
+        SFR0             000-01F            20           1
+        SFR1             080-09F            20           1
+        SFR2             100-10F            10           1
+        SFR3             180-18F            10           1
+        STRCODE          003-003             1           2
+                         604-1FFF          19FC
+        STRING           003-003             1           2
+                         604-1FFF           100
+
+                                  Symbol Table
+
+??_DisplayDateOnLCD                  cstackCOMMON 078
+??_DisplayTimeToLCD                  cstackCOMMON 078
+??_Get_DS1307_RTC_Date               cstackCOMMON 07A
+??_Get_DS1307_RTC_Time               cstackCOMMON 07A
+??_I2C_ReStart                       cstackCOMMON 072
+??_I2C_Read_Byte                     cstackCOMMON 072
+??_I2C_Send_ACK                      cstackCOMMON 072
+??_I2C_Send_NACK                     cstackCOMMON 072
+??_I2C_Start                         cstackCOMMON 072
+??_I2C_Stop                          cstackCOMMON 072
+??_I2C_Write_Byte                    cstackCOMMON 072
+??_InitI2C                           cstackCOMMON 072
+??_InitLCD                           cstackCOMMON 074
+??_Read_Bytes_From_DS1307_RTC        cstackCOMMON 076
+??_ToggleEpinOfLCD                   cstackCOMMON 072
+??_UART_Init                         cstackBANK0  046
+??_UART_Write                        cstackCOMMON 072
+??_UART_Write_Text                   cstackCOMMON 073
+??___aldiv                           cstackCOMMON 07A
+??___bmul                            cstackCOMMON 073
+??___lbdiv                           cstackCOMMON 073
+??___lbmod                           cstackCOMMON 073
+??_isr                               cstackCOMMON 070
+??_lcdClr                            cstackCOMMON 074
+??_lcdCmd                            cstackCOMMON 073
+??_lcdData                           cstackCOMMON 073
+??_lcdString                         cstackCOMMON 076
+??_main                              cstackBANK0  051
+?_DisplayDateOnLCD                   cstackCOMMON 070
+?_DisplayTimeToLCD                   cstackCOMMON 070
+?_Get_DS1307_RTC_Date                cstackCOMMON 070
+?_Get_DS1307_RTC_Time                cstackCOMMON 070
+?_I2C_ReStart                        cstackCOMMON 070
+?_I2C_Read_Byte                      cstackCOMMON 070
+?_I2C_Send_ACK                       cstackCOMMON 070
+?_I2C_Send_NACK                      cstackCOMMON 070
+?_I2C_Start                          cstackCOMMON 070
+?_I2C_Stop                           cstackCOMMON 070
+?_I2C_Write_Byte                     cstackCOMMON 070
+?_InitI2C                            cstackCOMMON 070
+?_InitLCD                            cstackCOMMON 070
+?_Read_Bytes_From_DS1307_RTC         cstackCOMMON 073
+?_ToggleEpinOfLCD                    cstackCOMMON 070
+?_UART_Init                          cstackBANK0  042
+?_UART_Write                         cstackCOMMON 070
+?_UART_Write_Text                    cstackCOMMON 070
+?___aldiv                            cstackCOMMON 072
+?___bmul                             cstackCOMMON 072
+?___lbdiv                            cstackCOMMON 072
+?___lbmod                            cstackCOMMON 072
+?_isr                                cstackCOMMON 070
+?_lcdClr                             cstackCOMMON 070
+?_lcdCmd                             cstackCOMMON 070
+?_lcdData                            cstackCOMMON 070
+?_lcdString                          cstackCOMMON 074
+?_main                               cstackCOMMON 070
+DisplayDateOnLCD@pDateArray          cstackCOMMON 078
+DisplayTimeToLCD@pTimeArray          cstackBANK0  044
+DisplayTimeToLCD@timeArr             cstackBANK0  03C
+DisplayTimeToLCD@timeArrPtr          cstackBANK0  043
+I2C_Write_Byte@Byte                  cstackCOMMON 072
+Read_Bytes_From_DS1307_RTC@Address   cstackCOMMON 077
+Read_Bytes_From_DS1307_RTC@NoOfBytes cstackCOMMON 074
+Read_Bytes_From_DS1307_RTC@i         cstackCOMMON 078
+Read_Bytes_From_DS1307_RTC@pData     cstackCOMMON 073
+UART_Init@baudrate                   cstackBANK0  042
+UART_Init@x                          cstackBANK0  04F
+UART_Write@data                      cstackCOMMON 072
+UART_Write_Text@i                    cstackCOMMON 074
+UART_Write_Text@text                 cstackCOMMON 073
+_ACKDT                               (abs)        48D
+_ACKEN                               (abs)        48C
+_ACKSTAT                             (abs)        48E
+_BRGH                                (abs)        4C2
+_CREN                                (abs)        0C4
+_DisplayDateOnLCD                    text914      01D
+_DisplayTimeToLCD                    text914      0B9
+_GIE                                 (abs)        05F
+_Get_DS1307_RTC_Date                 text916      342
+_Get_DS1307_RTC_Time                 text916      36D
+_I2C_ReStart                         text916      415
+_I2C_Read_Byte                       text916      405
+_I2C_Send_ACK                        text916      41B
+_I2C_Send_NACK                       text916      42B
+_I2C_Start                           text916      40D
+_I2C_Stop                            text916      424
+_I2C_Write_Byte                      text916      3F7
+_InitI2C                             text922      5D7
+_InitLCD                             text914      1D7
+_PEN                                 (abs)        48A
+_PORTB                               (abs)        006
+_PORTD                               (abs)        008
+_RB4                                 (abs)        034
+_RBIE                                (abs)        05B
+_RBIF                                (abs)        058
+_RC1                                 (abs)        039
+_RC2                                 (abs)        03A
+_RCEN                                (abs)        48B
+_RSEN                                (abs)        489
+_Read_Bytes_From_DS1307_RTC          text916      3BE
+_SEN                                 (abs)        488
+_SPBRG                               (abs)        099
+_SPEN                                (abs)        0C7
+_SSPADD                              (abs)        093
+_SSPBUF                              (abs)        013
+_SSPCON                              (abs)        014
+_SSPIF                               (abs)        063
+_SSPSTAT                             (abs)        094
+_SYNC                                (abs)        4C4
+_TRISB                               (abs)        086
+_TRISC1                              (abs)        439
+_TRISC2                              (abs)        43A
+_TRISC3                              (abs)        43B
+_TRISC4                              (abs)        43C
+_TRISC6                              (abs)        43E
+_TRISC7                              (abs)        43F
+_TRISD                               (abs)        088
+_TRMT                                (abs)        4C1
+_TXEN                                (abs)        4C5
+_TXREG                               (abs)        019
+_Temp                                bssCOMMON    07B
+_ToggleEpinOfLCD                     text914      1FB
+_UART_Init                           text924      233
+_UART_Write                          text923      5CE
+_UART_Write_Text                     text923      5B1
+__Habs1                              abs1         000
+__Hbank0                             bank0        000
+__Hbank1                             bank1        000
+__Hbank2                             bank2        000
+__Hbank3                             bank3        000
+__HbssBANK0                          bssBANK0     000
+__HbssCOMMON                         bssCOMMON    000
+__Hcinit                             cinit        000
+__Hclrtext                           clrtext      000
+__Hcode                              code         000
+__Hcommon                            common       000
+__Hconfig                            config       000
+__HcstackBANK0                       cstackBANK0  000
+__HcstackCOMMON                      cstackCOMMON 000
+__HdataBANK0                         dataBANK0    000
+__Heeprom_data                       eeprom_data  000
+__Hend_init                          end_init     00F
+__Hfunctab                           functab      000
+__HidataBANK0                        idataBANK0   000
+__Hidloc                             idloc        000
+__Hinit                              init         00C
+__Hintentry                          intentry     00C
+__Hmaintext                          maintext     000
+__Hpa_nodes                          pa_nodes     000
+__Hpowerup                           powerup      000
+__Hram                               ram          000
+__Hreset_vec                         reset_vec    003
+__Hsfr0                              sfr0         000
+__Hsfr1                              sfr1         000
+__Hsfr2                              sfr2         000
+__Hsfr3                              sfr3         000
+__Hstrings                           strings      000
+__Htext                              text         000
+__Labs1                              abs1         000
+__Lbank0                             bank0        000
+__Lbank1                             bank1        000
+__Lbank2                             bank2        000
+__Lbank3                             bank3        000
+__LbssBANK0                          bssBANK0     000
+__LbssCOMMON                         bssCOMMON    000
+__Lcinit                             cinit        000
+__Lclrtext                           clrtext      000
+__Lcode                              code         000
+__Lcommon                            common       000
+__Lconfig                            config       000
+__LcstackBANK0                       cstackBANK0  000
+__LcstackCOMMON                      cstackCOMMON 000
+__LdataBANK0                         dataBANK0    000
+__Leeprom_data                       eeprom_data  000
+__Lend_init                          end_init     00C
+__Lfunctab                           functab      000
+__LidataBANK0                        idataBANK0   000
+__Lidloc                             idloc        000
+__Linit                              init         00C
+__Lintentry                          intentry     004
+__Lmaintext                          maintext     000
+__Lpa_nodes                          pa_nodes     000
+__Lpowerup                           powerup      000
+__Lram                               ram          000
+__Lreset_vec                         reset_vec    000
+__Lsfr0                              sfr0         000
+__Lsfr1                              sfr1         000
+__Lsfr2                              sfr2         000
+__Lsfr3                              sfr3         000
+__Lstrings                           strings      000
+__Ltext                              text         000
+__S0                                 (abs)        604
+__S1                                 (abs)        07C
+__S2                                 (abs)        000
+___aldiv                             text924      292
+___aldiv@counter                     cstackBANK0  03C
+___aldiv@dividend                    cstackCOMMON 076
+___aldiv@divisor                     cstackCOMMON 072
+___aldiv@quotient                    cstackBANK0  03E
+___aldiv@sign                        cstackBANK0  03D
+___bmul                              text916      3B0
+___bmul@multiplicand                 cstackCOMMON 072
+___bmul@multiplier                   cstackCOMMON 074
+___bmul@product                      cstackCOMMON 073
+___lbdiv                             text914      17B
+___lbdiv@counter                     cstackCOMMON 074
+___lbdiv@dividend                    cstackCOMMON 073
+___lbdiv@divisor                     cstackCOMMON 072
+___lbdiv@quotient                    cstackCOMMON 075
+___lbmod                             text914      196
+___lbmod@counter                     cstackCOMMON 075
+___lbmod@dividend                    cstackCOMMON 074
+___lbmod@divisor                     cstackCOMMON 072
+___lbmod@rem                         cstackCOMMON 076
+__end_of_DisplayDateOnLCD            text914      0B9
+__end_of_DisplayTimeToLCD            text914      175
+__end_of_Get_DS1307_RTC_Date         text916      36D
+__end_of_Get_DS1307_RTC_Time         text916      3B0
+__end_of_I2C_ReStart                 text916      41B
+__end_of_I2C_Read_Byte               text916      40D
+__end_of_I2C_Send_ACK                text916      424
+__end_of_I2C_Send_NACK               text916      433
+__end_of_I2C_Start                   text916      415
+__end_of_I2C_Stop                    text916      42B
+__end_of_I2C_Write_Byte              text916      405
+__end_of_InitI2C                     text922      5F0
+__end_of_InitLCD                     text914      1F5
+__end_of_Read_Bytes_From_DS1307_RTC  text916      3F7
+__end_of_ToggleEpinOfLCD             text914      207
+__end_of_UART_Init                   text924      292
+__end_of_UART_Write                  text923      5D7
+__end_of_UART_Write_Text             text923      5CE
+__end_of___aldiv                     text924      307
+__end_of___bmul                      text916      3BE
+__end_of___lbdiv                     text914      196
+__end_of___lbmod                     text914      1B2
+__end_of_isr                         text937      604
+__end_of_lcdClr                      text914      01D
+__end_of_lcdCmd                      text914      1FB
+__end_of_lcdData                     text914      17B
+__end_of_lcdString                   text914      1D7
+__end_of_main                        maintext     502
+__pbssBANK0                          bssBANK0     054
+__pbssCOMMON                         bssCOMMON    07B
+__pcstackBANK0                       cstackBANK0  03C
+__pcstackCOMMON                      cstackCOMMON 070
+__pdataBANK0                         dataBANK0    020
+__pidataBANK0                        idataBANK0   000
+__pintentry                          intentry     004
+__pmaintext                          maintext     440
+__pstrings                           strings      502
+__ptext911                           text914      01D
+__ptext912                           text914      0B9
+__ptext913                           text914      1B2
+__ptext914                           text914      00F
+__ptext915                           text914      1D7
+__ptext916                           text916      342
+__ptext917                           text916      36D
+__ptext918                           text914      175
+__ptext919                           text914      1F5
+__ptext920                           text914      1FB
+__ptext921                           text916      3BE
+__ptext922                           text922      5D7
+__ptext923                           text923      5B1
+__ptext924                           text924      233
+__ptext925                           text924      292
+__ptext926                           text914      196
+__ptext927                           text914      17B
+__ptext928                           text916      3B0
+__ptext929                           text916      41B
+__ptext930                           text916      42B
+__ptext931                           text916      405
+__ptext932                           text916      415
+__ptext933                           text916      424
+__ptext934                           text916      3F7
+__ptext935                           text916      40D
+__ptext936                           text923      5CE
+__ptext937                           text937      5F0
+__ptext938                           text938      000
+__size_of_DisplayDateOnLCD           (abs)        000
+__size_of_DisplayTimeToLCD           (abs)        000
+__size_of_Get_DS1307_RTC_Date        (abs)        000
+__size_of_Get_DS1307_RTC_Time        (abs)        000
+__size_of_I2C_ReStart                (abs)        000
+__size_of_I2C_Read_Byte              (abs)        000
+__size_of_I2C_Send_ACK               (abs)        000
+__size_of_I2C_Send_NACK              (abs)        000
+__size_of_I2C_Start                  (abs)        000
+__size_of_I2C_Stop                   (abs)        000
+__size_of_I2C_Write_Byte             (abs)        000
+__size_of_InitI2C                    (abs)        000
+__size_of_InitLCD                    (abs)        000
+__size_of_Read_Bytes_From_DS1307_RTC (abs)        000
+__size_of_ToggleEpinOfLCD            (abs)        000
+__size_of_UART_Init                  (abs)        000
+__size_of_UART_Write                 (abs)        000
+__size_of_UART_Write_Text            (abs)        000
+__size_of___aldiv                    (abs)        000
+__size_of___bmul                     (abs)        000
+__size_of___lbdiv                    (abs)        000
+__size_of___lbmod                    (abs)        000
+__size_of_isr                        (abs)        000
+__size_of_lcdClr                     (abs)        000
+__size_of_lcdCmd                     (abs)        000
+__size_of_lcdData                    (abs)        000
+__size_of_lcdString                  (abs)        000
+__size_of_main                       (abs)        000
+_a                                   dataBANK0    027
+_b                                   dataBANK0    020
+_count                               bssBANK0     054
+_count_ch                            bssBANK0     058
+_exit                                init         00C
+_i                                   bssBANK0     056
+_isr                                 text937      5F0
+_lcdClr                              text914      00F
+_lcdCmd                              text914      1F5
+_lcdData                             text914      175
+_lcdString                           text914      1B2
+_main                                maintext     440
+_pRTCArray                           bssBANK0     059
+btemp                                (abs)        07E
+end_of_initialization                cinit        5AD
+i1l5055                                              
+i1l5063                                              
+i1l777                                               
+interrupt_function                   intentry     004
+intlevel0                            functab      000
+intlevel1                            functab      000
+intlevel2                            functab      000
+intlevel3                            functab      000
+intlevel4                            functab      000
+intlevel5                            functab      000
+l1513                                                
+l1528                                                
+l1534                                                
+l2221                                                
+l2227                                                
+l2233                                                
+l2239                                                
+l2245                                                
+l2251                                                
+l2263                                                
+l2950                                                
+l2953                                                
+l2956                                                
+l2959                                                
+l2965                                                
+l2968                                                
+l2975                                                
+l3668                                                
+l3704                                                
+l3710                                                
+l3876                                                
+l5051                                                
+l5065                                                
+l5067                                                
+l5077                                                
+l5079                                                
+l5081                                                
+l5085                                                
+l5087                                                
+l5089                                                
+l5097                                                
+l5099                                                
+l5105                                                
+l5107                                                
+l5109                                                
+l5115                                                
+l5119                                                
+l5123                                                
+l5129                                                
+l5131                                                
+l5135                                                
+l5137                                                
+l5143                                                
+l5213                                                
+l5217                                                
+l5221                                                
+l5223                                                
+l5225                                                
+l5227                                                
+l5229                                                
+l5231                                                
+l5233                                                
+l5235                                                
+l5237                                                
+l5241                                                
+l5243                                                
+l5251                                                
+l5253                                                
+l5255                                                
+l5257                                                
+l5259                                                
+l5261                                                
+l5263                                                
+l5265                                                
+l5267                                                
+l5269                                                
+l5271                                                
+l5273                                                
+l5275                                                
+l5277                                                
+l5287                                                
+l5291                                                
+l5293                                                
+l5299                                                
+l5301                                                
+l5303                                                
+l5305                                                
+l5307                                                
+l5309                                                
+l5311                                                
+l5313                                                
+l5317                                                
+l5319                                                
+l5321                                                
+l5323                                                
+l5325                                                
+l5327                                                
+l5329                                                
+l5331                                                
+l5333                                                
+l5335                                                
+l5337                                                
+l5339                                                
+l5345                                                
+l5349                                                
+l5351                                                
+l5353                                                
+l5355                                                
+l5357                                                
+l5359                                                
+l5361                                                
+l5363                                                
+l5365                                                
+l5367                                                
+l5369                                                
+l5371                                                
+l5373                                                
+l5375                                                
+l5377                                                
+l5379                                                
+l5381                                                
+l5383                                                
+l5397                                                
+l5399                                                
+l5401                                                
+l5403                                                
+l5405                                                
+l5407                                                
+l5409                                                
+l5495                                                
+l5497                                                
+l5503                                                
+l5507                                                
+l5517                                                
+l5521                                                
+l5525                                                
+l5529                                                
+l5535                                                
+l5537                                                
+l5541                                                
+l5547                                                
+l5549                                                
+l5551                                                
+l5553                                                
+l5555                                                
+l5557                                                
+l5561                                                
+l5563                                                
+l5565                                                
+l5567                                                
+l5569                                                
+l5571                                                
+l5573                                                
+l5575                                                
+l5577                                                
+l5579                                                
+l5587                                                
+l5589                                                
+l5593                                                
+l5595                                                
+l5597                                                
+l5599                                                
+l5603                                                
+l5605                                                
+l5607                                                
+l5609                                                
+l5611                                                
+l5613                                                
+l5615                                                
+l5617                                                
+l5619                                                
+l749                                                 
+l758                                                 
+lcdCmd@cmdout                        cstackCOMMON 073
+lcdData@dataout                      cstackCOMMON 073
+lcdString@d                          cstackCOMMON 074
+lcdString@i                          cstackCOMMON 076
+reset_vec                            reset_vec    000
+saved_w                              (abs)        07E
+start                                init         00C
+start_initialization                 cinit        56D
+u950                                                 
+u990                                                 
+wtemp0                               (abs)        07E
